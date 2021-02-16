@@ -1,0 +1,13 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    //example of while loop
+    int i = 0;
+    while (i < 50)
+    {
+        printf("hello, world \n");
+        i++;
+    }
+}
