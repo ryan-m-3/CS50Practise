@@ -1,0 +1,30 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    //create n variable to ask for input from user
+    int n;
+    //do while loop that asks for input from user and will ask until the input is between 1 and 8 inclusive
+    do
+    {
+        n = get_int("Height: ");
+    }
+    while (n < 1 || n > 8);
+    
+    //for loop to run the next lines when i is less than then input from user
+    for (int i = 0; i < n; i++)
+    {
+        //for everytime s is less than the i variable minue one from s variable value and print a space (originally was a dot but space now)
+        for (int s = n - 1; s > i; s--)
+        
+        printf(" ");
+        
+        //after printing the spaces, for everytime h is less than or equal to i variable than add one and print the hashtags and a new line to create pyramid style
+        for (int h = 0; h <= i; h++)
+        
+        printf("#");
+        printf("\n");
+        
+    }
+}
