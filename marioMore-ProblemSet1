@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <cs50.h>
+//state function to make sure it is run before function code is run
+void pyramid(char d, int n);
+int main(void)
+{
+    //create n variable to ask for input from user
+    int n;
+    //do while loop that asks for input from user and will ask until the input is between 1 and 8 inclusive
+    do
+    {
+        n = get_int("Height: ");
+    }
+    while (n < 1 || n > 8);
+
+//for loop to check i is less than n and if it is add 1 and run the next lines of code 
+    for (int i = 0; i < n; i++)
+    {
+        //the new pyramid function is called with each call giving d and n a new value and then running the function which will print the spaces and hashes needed to create the pyramid type shape
+        pyramid(' ', n - 1 - i);
+        pyramid('#', i + 1);
+        pyramid(' ', 2);
+        pyramid('#', i + 1);
+        
+        printf("\n");
+        
+    }
+
+//create a function that creates two variables, d and i
+//the function will run the for loop so that for everytime i is less than i, add 1 to i and then print the value of d
+//the value of d is given when function is called
+}
+void pyramid(char d, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%c", d);
+    }
+}
