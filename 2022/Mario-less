@@ -1,0 +1,30 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    //define n integer
+    int n;
+    int m = 0;
+    // ask for height input as long as n is less tha  or = 0 or greater tha 8
+    do
+    {
+        n = get_int("height: ");
+    }
+    while (n <= 0 || n > 8);
+    // declare new int for m, while m is less than n print a new line with the # in the nested for loop
+    for (m = 0; m < n; m++)
+    {
+        // declare l int, l = 0 and while l is less than or = to i, print the #
+        for (int i = n - 1; i > m; i--)
+        {
+            printf(" ");
+        }c
+
+        for (int l = 0; l <= m; l++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
